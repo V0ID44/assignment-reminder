@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assignment Reminder</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="manifest" href="manifest.json"/>
+</head>
+<body>
+
+<div class="app">
+  <h1>📚 Assignment Reminder</h1>
+
+  <div class="form">
+    <input type="text" id="title" placeholder="Assignment name"/>
+    <input type="date" id="dueDate"/>
+
+    <select id="priority">
+      <option value="Low">Low Priority</option>
+      <option value="Medium">Medium Priority</option>
+      <option value="High">High Priority</option>
+    </select>
+
+    <button onclick="addAssignment()">Add Assignment</button>
+  </div>
+
+  <div class="top-bar">
+    <button onclick="sortAssignments()">Sort by Due Date</button>
+    <button onclick="clearCompleted()">Clear Completed</button>
+  </div>
+
+  <ul id="list"></ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
